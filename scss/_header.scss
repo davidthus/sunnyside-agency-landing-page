@@ -1,0 +1,137 @@
+@use "utils.scss" as u;
+
+.header {
+  padding: 4vmin 3%;
+  background-color: hsl(200, 100%, 62%);
+  background-image: url("../../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+
+  &__title {
+    @include u.fraunces();
+    color: u.$white;
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 10vh 0;
+    letter-spacing: 1.5rem;
+  }
+
+  &__arrow {
+    margin: 15vh auto;
+    display: block;
+  }
+}
+
+.navbar {
+  @include u.flex(row, space-between);
+  color: u.$white;
+
+  &__title {
+    @include u.barlow();
+    font-weight: 800;
+    font-size: 4rem;
+    margin: 0;
+  }
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2vmin;
+}
+
+.link {
+  @include u.flex(row, center);
+}
+
+.link a {
+  padding: 1rem;
+  @include u.barlow();
+}
+
+.link--contact a {
+  @include u.fraunces();
+  display: block;
+  padding: 2rem 3rem;
+  background-color: u.$white;
+  color: u.$dark_desaturated_blue;
+  border-radius: 100rem;
+}
+
+.button--toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+}
+
+.navbar__links--hamburger {
+  display: none;
+  position: fixed;
+  top: 6rem;
+  width: 90vw;
+  padding: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: u.$white;
+}
+
+.navbar__links--hamburger::before {
+  clip-path: polygon(100% 2%, 0% 100%, 100% 100%);
+  content: "";
+  background-color: u.$white;
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  top: -2rem;
+  left: calc(100% - 2rem + 0.5px);
+}
+
+.links--hamburger {
+  color: u.$dark_grayish_blue;
+  @include u.barlow();
+  @include u.flex(column, center);
+  gap: 2rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.link--contacthamburger {
+  background-color: u.$yellow;
+  padding: 2rem;
+  @include u.fraunces;
+  color: u.$dark_desaturated_blue;
+  border-radius: 100rem;
+}
+
+@media screen and (max-width: 630px) {
+  .button--toggle {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .header {
+    background-color: hsl(200, 100%, 62%);
+    background-image: url("../../images/mobile/image-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .header {
+    background-position: center bottom;
+  }
+}

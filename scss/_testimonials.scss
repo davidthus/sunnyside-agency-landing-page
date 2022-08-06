@@ -1,0 +1,78 @@
+@use "./utils.scss" as u;
+
+.testimonials {
+  background-color: u.$white;
+  padding: 8vmin 0;
+
+  &__title {
+    @include u.fraunces();
+    color: u.$grayish_blue;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 8rem;
+  }
+}
+
+.testimonials__container {
+  gap: 4vmin;
+  width: 80%;
+  max-width: 1100px;
+  @include u.flex(row, center);
+  margin: 0 auto;
+}
+
+.image--profile {
+  border-radius: 900rem;
+  width: 100%;
+  height: auto;
+}
+
+.testimonial {
+  @include u.flex(column, center);
+
+  &__profile {
+    width: 8rem;
+  }
+
+  &__paragraph {
+    @include u.barlow();
+    color: u.$darker_grayish_blue;
+    text-align: center;
+    margin: 3rem 0 6rem;
+  }
+
+  &__name {
+    @include u.fraunces();
+    font-weight: 900;
+    margin: 1rem 0;
+    color: u.$dark_desaturated_blue;
+  }
+
+  &__job {
+    margin: 0;
+    @include u.barlow();
+    font-size: 1.5rem;
+    color: u.$grayish_blue;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .testimonials__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .testimonials__container {
+    max-width: 400px;
+    @include u.flex(column, center);
+    gap: 9rem;
+  }
+
+  .testimonial__job {
+    font-size: 2rem;
+  }
+}

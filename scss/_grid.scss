@@ -115,9 +115,6 @@
   background: rgba(250, 212, 0, 1);
 }
 
-
-
-
 .textimage {
   text-align: center;
   width: 50%;
@@ -144,6 +141,10 @@
   .grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+  }
+
+  .two {
+    order: -1;
   }
 
   .textimage {

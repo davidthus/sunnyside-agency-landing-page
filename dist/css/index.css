@@ -318,6 +318,9 @@ a:link {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
+  .two {
+    order: -1;
+  }
   .textimage__title {
     font-size: 3.2rem;
   }

@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Site URL, Solution URL](https://davidthus.github.io/sunnyside-landing-page/)
+- The Final Product: [Finished Website](https://davidthus.github.io/sunnyside-landing-page/)
 
 ## My process
 
@@ -42,7 +42,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project, for the first time, I have made a hamburger menu. I know, I know, it is too good.
+In this project, for the first time, I made a hamburger menu. I know, I know, it is too good.
 
 ## Author
 
@@ -52,5 +52,4 @@ In this project, for the first time, I have made a hamburger menu. I know, I kno
 ## Acknowledgments
 
 It was I who worked on this project.
-Call me davidthus or QUIXOTE or whatever you will
-Discord: QUIXOTE#6325
+Call me QUIXOTE

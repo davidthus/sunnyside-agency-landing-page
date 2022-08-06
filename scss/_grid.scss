@@ -70,10 +70,53 @@
   &__link {
     @include u.fraunces();
     font-weight: 900;
+    z-index: 1;
+    position: relative;
     font-size: 1.7rem;
-    color: u.$dark_desaturated_blue;
+    color: u.$dark_desaturated_blue; 
   }
 }
+
+#redlink::after {
+  position: absolute;
+  height: 1rem;
+  width: 13rem;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -8px);
+  z-index: -1;
+  border-radius: 99rem;
+  background: rgba(254, 120, 103, 0.5);
+  content: "";
+  display: inline-block;
+  opacity: 0.3;
+}
+
+#redlink:hover::after {
+  background: rgba(254, 120, 103, 1);
+}
+
+#yellowlink::after {
+  position: absolute;
+  height: 1rem;
+  width: 13rem;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -8px);
+  z-index: -1;
+  border-radius: 99rem;
+  background: rgba(250, 212, 0, 0.5);
+  content: "";
+  display: inline-block;
+  opacity: 0.3;
+}
+
+#yellowlink:hover::after {
+  background: rgba(250, 212, 0, 1);
+}
+
+
+
 
 .textimage {
   text-align: center;

@@ -36,12 +36,20 @@
   @include u.barlow();
 }
 
+.footer-link:hover {
+  color: u.$white;
+}
+
+.socials:hover {
+  cursor: pointer;
+}
+
 .attribution {
   background: u.$soft_red;
   @include u.barlow();
 }
 
-@media screen and (max-width: u.$mobile){
+@media screen and (max-width: u.$mobile) {
   .footer-container__footer-links {
     @include u.flex(column, space-evenly);
   }

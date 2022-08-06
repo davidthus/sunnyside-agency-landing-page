@@ -108,6 +108,11 @@
   border-radius: 100rem;
 }
 
+.link--contact a:hover {
+  color: u.$white;
+  background: rgba(255,255,255, 0.5);
+}
+
 @media screen and (max-width: 630px) {
   .button--toggle {
     display: flex;

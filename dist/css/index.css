@@ -148,6 +148,11 @@ a:link {
   border-radius: 100rem;
 }
 
+.link--contact a:hover {
+  color: hsl(0deg, 0%, 100%);
+  background: rgba(255, 255, 255, 0.5);
+}
+
 @media screen and (max-width: 630px) {
   .button--toggle {
     display: flex;
@@ -244,8 +249,48 @@ a:link {
 .text__link {
   font-family: "Fraunces", serif;
   font-weight: 900;
+  z-index: 1;
+  position: relative;
   font-size: 1.7rem;
   color: hsl(212deg, 27%, 19%);
+}
+
+#redlink::after {
+  position: absolute;
+  height: 1rem;
+  width: 13rem;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -8px);
+  z-index: -1;
+  border-radius: 99rem;
+  background: rgba(254, 120, 103, 0.5);
+  content: "";
+  display: inline-block;
+  opacity: 0.3;
+}
+
+#redlink:hover::after {
+  background: rgb(254, 120, 103);
+}
+
+#yellowlink::after {
+  position: absolute;
+  height: 1rem;
+  width: 13rem;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -8px);
+  z-index: -1;
+  border-radius: 99rem;
+  background: rgba(250, 212, 0, 0.5);
+  content: "";
+  display: inline-block;
+  opacity: 0.3;
+}
+
+#yellowlink:hover::after {
+  background: rgb(250, 212, 0);
 }
 
 .textimage {
@@ -437,6 +482,14 @@ a:link {
 
 .footer-link {
   font-family: "Barlow", sans-serif;
+}
+
+.footer-link:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.socials:hover {
+  cursor: pointer;
 }
 
 .attribution {
